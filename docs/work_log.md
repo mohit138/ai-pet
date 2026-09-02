@@ -5,8 +5,7 @@
 
 ---
 
-## [2026-09-03] - Audio I/O & Environment Setup
+## [2026-09-03] - Audio I/O, Environment & BT Reconnect Setup
 - **Status:** Complete
-- **Summary:** Verified two-way audio on Sony SRS-XB13. Configured isolated Python `.venv`, created `requirements.txt` (`gTTS`), and verified `scripts/morning_greeting.py` audio playback.
-- **Next Step:** Implement voice listening loop (`speech_recognition` / mic input).
-EOF
+- **Summary:** Verified two-way audio on Sony SRS-XB13. Created isolated Python `.venv`, `requirements.txt` (`gTTS`, `python-dotenv`), and `.env` for MAC address abstraction. Implemented modular `utils/bt_manager.py` for auto-reconnect/profile switching integrated into `scripts/morning_greeting.py`.
+- **Next Step:** Implement voice listening module using microphone input.

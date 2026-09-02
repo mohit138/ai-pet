@@ -1,7 +1,12 @@
 import os
+import sys
 import time
 from datetime import datetime
 from gtts import gTTS
+
+# Import Bluetooth utility from utils folder
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from utils.bt_manager import ensure_bluetooth_connected
 
 def speak(text):
     """Converts text to speech and plays it through the Bluetooth speaker."""
@@ -16,6 +21,9 @@ def speak(text):
 def main():
     current_time = datetime.now().strftime("%I:%M %p")
     print("--- Starting AI Pet Morning Routine ---")
+    
+    # Ensure Bluetooth speaker is reconnected before greeting
+    ensure_bluetooth_connected()
     
     # 1. Spoken Alarm Greeting
     greeting = f"Good morning! It is {current_time}. Time to wake up and get moving."
