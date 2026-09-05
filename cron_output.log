@@ -1,0 +1,39 @@
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+Segmentation fault
+--- Starting AI Pet Morning Routine ---
+[BT] Attempting connection to 78:5E:A2:35:8C:05...
+[BT Warning] Speaker unreachable or profile switch failed.
+[Pet]: Good morning! It is 09:10 PM. Time to wake up and get moving.
+Pet is active. (Voice loop will go here next)
+main: [src/mpg123.c:check_fatal_output():334] error: out123 error 3: failure loading driver module
+--- Starting AI Pet Morning Routine ---
+[BT] Attempting connection to 78:5E:A2:35:8C:05...
+[BT] Speaker connected & Headset profile active.
+[Pet]: Good morning! It is 09:15 PM. Time to wake up and get moving.
+Pet is active. (Voice loop will go here next)
+main: [src/mpg123.c:check_fatal_output():334] error: out123 error 3: failure loading driver module
+--- Starting AI Pet Morning Routine ---
+[BT] Attempting connection to 78:5E:A2:35:8C:05...
+[BT] Speaker connected & Headset profile active.
+[Pet]: Good morning! It is 09:18 PM. Time to wake up and get moving.
+Pet is active. (Voice loop will go here next)
+main: [src/mpg123.c:check_fatal_output():334] error: out123 error 3: failure loading driver module
+--- Starting AI Pet Morning Routine ---
+[BT] Attempting connection to 78:5E:A2:35:8C:05...
+[BT] Speaker connected & Headset profile active.
+[Pet]: Good morning! It is 09:21 PM. Time to wake up and get moving.
+Pet is active. (Voice loop will go here next)
+--- Starting AI Pet Morning Routine ---
+[BT] Attempting connection to 78:5E:A2:35:8C:05...
+[BT] Speaker connected & Headset profile active.
+[Pet]: Good morning! It is 09:24 PM. Time to wake up and get moving.
+Pet is active. (Voice loop will go here next)
+--- Starting AI Pet Morning Routine ---
+[BT] Attempting connection to 78:5E:A2:35:8C:05...
+[BT] Speaker connected & Headset profile active.
+[Pet]: Good morning! It is 09:27 PM. Time to wake up and get moving.
+Pet is active. (Voice loop will go here next)
