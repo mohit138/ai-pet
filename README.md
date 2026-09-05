@@ -22,7 +22,10 @@ Install required system libraries for audio playback, recording, and Python envi
     ```
 
 3. Configure environment variables in .env:
-    `BT_MAC_ADDRESS=XX:XX:XX:XX:XX:XX`
+    ```
+        BT_MAC_ADDRESS=XX:XX:XX:XX:XX:XX
+        GEMINI_API_KEY=<key>
+    ```
 
 ## Running the Pet
 
