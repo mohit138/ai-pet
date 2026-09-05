@@ -7,8 +7,9 @@ load_dotenv()
 
 SYSTEM_PROMPT = (
     "You are an affectionate, witty AI desk pet living on a Raspberry Pi. "
-    "Keep your response strictly to 1 or 2 short sentences (maximum 20 words). "
-    "Do not use emojis, markdown, asterisks, bullet points, or special characters."
+    "Respond in plain spoken English only. "
+    "Do NOT use markdown, bold text, asterisks, emojis, bullet points, or special formatting. "
+    "Keep responses under 25 words."
 )
 
 class Brain:
@@ -21,20 +22,26 @@ class Brain:
         self.client = genai.Client(api_key=api_key)
         self.model = "gemini-3.6-flash"
         
-        # Initialize a chat session with system instructions
+        # Initialize chat session with system instruction
         self.chat = self.client.chats.create(
             model=self.model,
             config=types.GenerateContentConfig(
                 system_instruction=SYSTEM_PROMPT,
-                max_output_tokens=60
+                max_output_tokens=600
             )
         )
 
     def think(self, user_text: str) -> str:
-        """Sends user speech to Gemini chat session and returns a concise pet response."""
+        """Sends user speech to Gemini chat session and safely extracts response text."""
         try:
             response = self.chat.send_message(user_text)
-            return response.text.strip()
+            
+            # Guard against NoneType before calling .strip()
+            if response and getattr(response, "text", None):
+                return response.text.strip()
+            
+            return "I heard you, but I wasn't sure how to respond!"
+            
         except Exception as e:
             print(f"[Brain Error]: {e}")
             return "Oops, my brain glitched for a second!"

@@ -39,7 +39,7 @@ def ensure_bluetooth_connected():
         print("[BT] Speaker connected & Headset profile active.")
         # Unmute and set playback volume to 85% for clear audio output
         subprocess.run("pactl set-sink-mute @DEFAULT_SINK@ 0", shell=True, env=env)
-        subprocess.run("pactl set-sink-volume @DEFAULT_SINK@ 85%", shell=True, env=env)
+        subprocess.run("pactl set-sink-volume @DEFAULT_SINK@ 75%", shell=True, env=env)
         
         # Microphone input volume
         subprocess.run("pactl set-source-mute @DEFAULT_SOURCE@ 0", shell=True, env=env)
